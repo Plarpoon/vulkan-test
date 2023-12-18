@@ -16,11 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # Install the Vulkan SDK
+      # Install the Vulkan SDK and GLFW library
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y libvulkan-dev
+          sudo apt install -y libvulkan-dev libglfw3-dev
 
       # Configure CMake
       - name: Configure CMake
